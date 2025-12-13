@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/landing/HeroSection";
+import PortfolioSection from "@/components/landing/PortfolioSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import PricingSection from "@/components/landing/PricingSection";
@@ -23,6 +24,7 @@ const Index = () => {
 
       <main className="min-h-screen bg-background">
         <HeroSection />
+        <PortfolioSection />
         <TestimonialsSection />
         <BenefitsSection />
         <PricingSection />
