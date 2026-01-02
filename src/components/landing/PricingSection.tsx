@@ -2,7 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const WHATSAPP_LINK = "https://wa.me/";
+const WHATSAPP_NUMBER = "5561998162830";
+const getWhatsAppLink = (planName: string) => 
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Olá! Tenho interesse no plano ${planName}.`)}`;
 
 const plans = [
   {
@@ -154,7 +156,7 @@ const PricingCard = ({
           : "bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground"
       )}
     >
-      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+      <a href={getWhatsAppLink(name)} target="_blank" rel="noopener noreferrer">
         Quero este plano
       </a>
     </Button>
