@@ -51,7 +51,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]"
             >
               <a href="#trabalhos">NOSSOS TRABALHOS</a>
             </Button>
