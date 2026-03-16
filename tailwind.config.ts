@@ -105,6 +105,12 @@ export default {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "rocketFly": {
+          "0%": { transform: "translate(0, 0) rotate(0deg)", opacity: "1" },
+          "40%": { transform: "translate(30px, -40px) rotate(-15deg)", opacity: "0" },
+          "60%": { transform: "translate(-30px, 40px) rotate(15deg)", opacity: "0" },
+          "100%": { transform: "translate(0, 0) rotate(0deg)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

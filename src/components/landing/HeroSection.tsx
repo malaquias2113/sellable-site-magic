@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Monitor, TrendingUp, Rocket } from "lucide-react";
 
@@ -38,12 +39,7 @@ const HeroSection = () => {
               subtitle="Perfeito para"
               delay="0.4s"
             />
-            <FeatureCard
-              icon={<Rocket className="w-8 h-8" />}
-              title="Campanhas e Lançamentos"
-              subtitle=""
-              delay="0.5s"
-            />
+            <RocketFeatureCard delay="0.5s" />
           </div>
 
           {/* CTA Button */}
@@ -86,5 +82,34 @@ const FeatureCard = ({ icon, title, subtitle, delay }: FeatureCardProps) => (
     <h3 className="text-lg font-semibold text-foreground">{title}</h3>
   </div>
 );
+
+const RocketFeatureCard = ({ delay }: { delay: string }) => {
+  const [flying, setFlying] = useState(false);
+
+  const handleClick = () => {
+    if (flying) return;
+    setFlying(true);
+    setTimeout(() => setFlying(false), 1000);
+  };
+
+  return (
+    <div
+      onClick={handleClick}
+      className="group p-6 rounded-2xl bg-card/50 border border-border hover:border-primary/30 transition-all duration-300 hover:bg-card opacity-0 animate-fade-in cursor-pointer select-none"
+      style={{ animationDelay: delay }}
+    >
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+        <Rocket
+          className={`w-8 h-8 transition-all duration-500 ${
+            flying
+              ? "animate-[rocketFly_1s_ease-in-out_forwards]"
+              : ""
+          }`}
+        />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground">Campanhas e Lançamentos</h3>
+    </div>
+  );
+};
 
 export default HeroSection;
