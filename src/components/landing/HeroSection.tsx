@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Monitor, TrendingUp, Rocket } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/";
+const WHATSAPP_LINK = "https://wa.me/5561998162830";
 
 const HeroSection = () => {
   return (
