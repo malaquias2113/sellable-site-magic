@@ -39,12 +39,7 @@ const HeroSection = () => {
               subtitle="Perfeito para"
               delay="0.4s"
             />
-            <FeatureCard
-              icon={<Rocket className="w-8 h-8" />}
-              title="Campanhas e Lançamentos"
-              subtitle=""
-              delay="0.5s"
-            />
+            <RocketFeatureCard delay="0.5s" />
           </div>
 
           {/* CTA Button */}
