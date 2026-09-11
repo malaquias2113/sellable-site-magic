@@ -64,13 +64,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/luiz.gabriel_reis/"
+                  href="https://www.instagram.com/kingss_techgroup/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
-                  @luiz.gabriel_reis
+                  @kingss_techgroup
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
