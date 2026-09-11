@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Monitor, TrendingUp, Rocket } from "lucide-react";
+import { Monitor, TrendingUp, Rocket, ShieldCheck } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/5561998162830";
 
@@ -15,6 +15,14 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Trust badge */}
+          <div className="flex justify-center mb-6 opacity-0 animate-fade-in">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-card/60 text-sm text-muted-foreground">
+              <ShieldCheck className="w-4 h-4 text-primary" />
+              +50 empresas atendidas · escopo e prazo por escrito
+            </span>
+          </div>
+
           {/* Main headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 opacity-0 animate-fade-in">
             Transformamos suas ideias em sites que{" "}

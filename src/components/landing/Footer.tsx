@@ -1,38 +1,89 @@
-import { Instagram } from "lucide-react";
+import { Instagram, MessageCircle, Mail } from "lucide-react";
+
+const WHATSAPP_LINK = "https://wa.me/5561998162830";
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-background border-t border-border">
+    <footer className="pt-16 pb-10 bg-background border-t border-border">
       <div className="container px-4">
-        <div className="flex flex-col items-center gap-6">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img
-              src="https://cdn.lugc.link/b4ab0ab1-58b5-4a50-acaf-6519cd752c39/-/preview/65x65/-/format/auto/"
-              alt="King's Logo"
-              className="w-12 h-12 object-contain"
-            />
-            <span className="font-display text-2xl font-bold text-gradient-gold">
-              King's
-            </span>
+        <div className="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="https://cdn.lugc.link/b4ab0ab1-58b5-4a50-acaf-6519cd752c39/-/preview/65x65/-/format/auto/"
+                alt="King's Logo"
+                className="w-11 h-11 object-contain"
+              />
+              <span className="font-display text-2xl font-bold text-gradient-gold">
+                King's
+              </span>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Criação de sites profissionais para empresas que querem ser
+              encontradas e vender todos os dias.
+            </p>
           </div>
 
-          {/* Social links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.instagram.com/luiz.gabriel_reis/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
+          {/* Navigation */}
+          <div>
+            <h3 className="font-semibold mb-4">Navegação</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                { label: "Nossos trabalhos", href: "#trabalhos" },
+                { label: "Como funciona", href: "#processo" },
+                { label: "Planos", href: "#planos" },
+                { label: "Perguntas frequentes", href: "#faq" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Copyright */}
+          {/* Contact */}
+          <div>
+            <h3 className="font-semibold mb-4">Contato</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  (61) 99816-2830
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/luiz.gabriel_reis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @luiz.gabriel_reis
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <Mail className="w-4 h-4" />
+                Atendimento de seg. a sex., 9h às 18h
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-6 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024. Todos os direitos reservados.
+            © {new Date().getFullYear()} King's. Todos os direitos reservados.
           </p>
         </div>
       </div>
