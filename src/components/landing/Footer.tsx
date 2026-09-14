@@ -1,4 +1,5 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react";
+import WorkWithUsSheet from "./WorkWithUsSheet";
 
 const WHATSAPP_LINK = "https://wa.me/5561998162830";
 
