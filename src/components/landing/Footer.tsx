@@ -1,4 +1,5 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react";
+import WorkWithUsSheet from "./WorkWithUsSheet";
 
 const WHATSAPP_LINK = "https://wa.me/5561998162830";
 
@@ -6,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="pt-16 pb-10 bg-background border-t border-border">
       <div className="container px-4">
-        <div className="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -44,6 +45,16 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Work with us */}
+          <div>
+            <h3 className="font-semibold mb-4">Carreira</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <WorkWithUsSheet />
+              </li>
             </ul>
           </div>
 
